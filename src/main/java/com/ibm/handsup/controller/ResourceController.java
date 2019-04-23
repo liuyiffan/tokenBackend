@@ -13,6 +13,6 @@ public class ResourceController {
 	@ResponseBody
     @RequestMapping(value="/all", method = RequestMethod.GET)
     public Response<Object> getToken() {
-        return Response.ok("Get it.");
+        return Response.ok("This is a text from back-end.");
     }
 }
