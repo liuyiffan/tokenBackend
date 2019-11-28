@@ -11,4 +11,4 @@ mvn clean install -Dmaven.test.skip=true
 docker build --tag handsup:latest .
 docker stop handsup
 docker rm handsup
-docker run -m 256M -p 8443:8443 --expose=8443 --name handsup -d handsup:latest
+docker run -m 256M -p 8443:8443 -p 8080:8080 --name handsup -d handsup:latest
