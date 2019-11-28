@@ -7,7 +7,7 @@ package com.ibm.handsup.response;
  * @param <T>
  */
 public class Response<T> {
-	public static final int CODE_SUCCESS = 100;
+	public static final int CODE_SUCCESS = 200;
 	public static final int CODE_COMMON_ERROR = 800;
 	public static final int CODE_TOKEN_NOTEXIST = 801;
 	public static final int CODE_TOKEN_EXPIRED = 802;
@@ -28,8 +28,8 @@ public class Response<T> {
 	 * Empty success response body
 	 * @return
 	 */
-	public static Response<Object> ok() {
-		return new Response<Object>(CODE_SUCCESS, MESSAGE_SECCESS, null);
+	public static <T> Response<T> ok() {
+		return new Response<T>(CODE_SUCCESS, MESSAGE_SECCESS, null);
 	}
 	
 	/**
@@ -37,8 +37,8 @@ public class Response<T> {
 	 * @param content
 	 * @return
 	 */
-	public static Response<Object> ok(Object content) {
-		return new Response<Object>(CODE_SUCCESS, MESSAGE_SECCESS, content);
+	public static <T> Response<T> ok(T content) {
+		return new Response<T>(CODE_SUCCESS, MESSAGE_SECCESS, content);
 	}
 	
 	/**
@@ -48,7 +48,7 @@ public class Response<T> {
 	 * @param content
 	 * @return
 	 */
-	public static Response<Object> ok(int code, String message, Object content) {
-		return new Response<Object>(code, message, content);
+	public static <T> Response<T> ok(int code, String message, T content) {
+		return new Response<T>(code, message, content);
 	}
 }
