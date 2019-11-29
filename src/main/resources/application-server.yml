@@ -1,8 +1,8 @@
 server:
   port: 8443
   ssl:
-    key-store: server.keystore
+    key-store: 3159647_www.liudada.cn.pfx
+    key-store-type: PKCS12
+    key-store-password: m04O7iWy
     key-alias: tomcat
     enabled: true
-    key-store-password: 123456
-    key-store-type: JKS
